@@ -1,0 +1,155 @@
+Angular is build on the top of Typescript..
+
+Typescript is superset of javascript
+Typescript file extension is '.ts'
+
+we cannot run Typescript file in browser.. if we want to execute, then we need to convert
+Typescript file into javascript and then we can run our logic in browser.. 
+and to execute our logic in browser need to place the javascript file in html file then we can..
+
+so, first of all, we need to convert Typescript file into javascript file..
+ 
+in java we use javac (java compiler) to convert source code to byte code
+
+and in Typescript we use tsc (typescipt compiler)
+
+to convert .ts to .js : tsc <filename>.ts
+            then .js file is going to create :  <filename>.js
+            to run .js file on console : node <filename>.js
+    
+    the process of converting typescipt into javascript called transpilation..
+
+
+to run our js file on browser : 
+    first of all, create one .html file and then 
+        
+        <html>
+            <head>
+                <script src='<filename>.js'></script>
+            </head>
+        </html>
+
+    need to place <head> inside the <html> tag and then 
+        inside the <head> tag need to place <script> tag with javascript filename.. like i shown in 
+                in above code
+
+variables in typescipt :
+    variables used to store the values
+    variables stores values in memory according to the datatypes
+    
+    syntax : var variablename:datatype=value;
+    ex : var sname:string="Akshay";
+
+    in java we declare variable : int age = 20;
+
+datatypes in Typescript :
+    number
+    string
+    boolean
+    any
+
+    number :: it is used for all type of numbers
+                    floating and integers
+    
+    string :: collection of character in double or in single quotes
+
+    boolean :: true or false
+
+    any :: any type of values we can store
+            integers
+            booleans
+            floating
+            strings
+            anything....
+
+keyword in javascript ::
+                    var
+                    let
+                    const
+
+var keyword :   
+        var keyword is used to declare the variable
+        it is functional scope
+
+        var index = 0;
+        for(var index = 0; index <=5 ; index++){
+             console.log("Index Value Inside For Loop:: " + index); //12345
+        }
+        console.log("Inde value Outside For Loop :: " + index); //expected 0 but 6 comes
+
+    to overcome this problem "let" keyword introduced
+
+let keyword :
+        let keyword is block scope
+
+        var index = 0;
+        for(let index = 0; index<=5; index++){  
+            console.log("Index Value Inside For Loop:: "+ index);   
+        }
+        console.log("Index Value Outside For Loop :: "+ index); // It reamins 0
+
+
+'var' keyword is function scope
+
+'let' keyword is block scope
+
+const keyword :
+        const keyword is used to declare constant variable in javascript
+        to declare constant variable, need to initialize the value
+        once const variable declare, we cannot modify it..
+        we cannot modify the const variables..
+
+Arrays in Typescript :
+        Arrays is used to store group of values
+        In typescipt, arrays value size is not fixed.. we can store many values as many we want
+        In Typescript, arrays can store heterogenious values
+    
+    syntax : var variablename:dataype[];
+            variablename=[values];
+            console.log(variablename);
+
+    specific type of array :
+            var variablename:Arrays<datatype>;
+            variablename=[values];
+            console.log(variablename);
+
+    allowing only specific type of values : 
+            var variablename:Arrays<datatype | datatype>;
+            variablename=[values, values];
+            console.log(variablename);
+
+    allowing any type of values :
+            var variablename:Arrays<any>;
+            variablename=[values];
+            console.log(variablename);
+
+Functions :
+        Functions are primary building blocks of any program.
+        In Java Script, Functions are very important bcz java script itself is a functional programming language.
+        Functions ensure that the program is maintainable and resusable
+        TypeScript supports for both functions and OOPS.
+        In TypeScript, functions can be of two types
+            
+            1) Named functions (function which contains a name)
+                    Function can have a parameter and can have a return type also
+
+	        2) Anonymous functions (function without name)
+                    The function which doesn't contain any name is called as an Anonymous function.
+                    Anonymous function is the one which is declared as an expression
+        
+        In Typescript function can take parameters
+        Parameters are the values or arguments which we will supply to function as input
+        Same as java
+
+Optional parameter :
+        In TypeScript we have optional parameter functionality
+        Optional Parameter should be the last argument
+        Optional Parameter will be represented using ?
+
+Rest Parameters : (varargs)
+        Rest Parameters are similar to varargs in java
+        If we don't know how many parameters we need to take for a function then 
+                we can simply use Rest Parameters
+    Note: Rest Parameter should be the last parameter of the function.
+
+
